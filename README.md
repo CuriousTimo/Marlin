@@ -13,7 +13,7 @@ This firmware is configured for an Anycubic Kossel Linear Plus fitted with a SKR
 
 ### Motherboard
 * [SKR V1.3](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3)
-  CPU:
+ * CPU:
   * ARM Cortex - M3 series
   * LPC1768
 
