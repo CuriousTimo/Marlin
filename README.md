@@ -14,12 +14,12 @@ This firmware is configured for an Anycubic Kossel Linear Plus fitted with a SKR
 ### Motherboard
 * [SKR V1.3](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3)
  * CPU:
-  * ARM Cortex - M3 series
-  * LPC1768
+  - ARM Cortex - M3 series
+  - LPC1768
 
 ### Drivers
-* [TCM2209] on X/Y/Z
-* [DRV8825] on E
+* TCM2209 on X/Y/Z
+* DRV8825 on E
 
 ### Steppers
 * **X-axis:** 1.8° motor
@@ -30,8 +30,8 @@ This firmware is configured for an Anycubic Kossel Linear Plus fitted with a SKR
 
 ### Hotend
  * Bowden Tube
- * [24V Heater Cartridge]
- * [12v 5015 fan]
+ * 24V Heater Cartridge
+ * 12v 5015 fan
  * [PINDA](https://www.prusa3d.com)
 
 
