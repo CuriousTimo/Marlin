@@ -1,4 +1,4 @@
-# Marlin Firmware for AtomX MK3 / RAMPS / DRV8825 / 1.8 Steppers
+# Marlin Firmware for Anycubic Kossel Linear Plus / SKR V1.3 / TCM2209 / 1.8 Steppers
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
@@ -9,30 +9,34 @@
 
 ## Specs
 
-This firmware is configured for an AtomX MK3 fitted with a ATmega2560 RAMPS and DRV8825s:
+This firmware is configured for an Anycubic Kossel Linear Plus fitted with a SKR V1.3 and TCM2209s:
 
 ### Motherboard
-* [ATmega2560 RAMPS]
+* [SKR V1.3](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3)
+  CPU:
+  * ARM Cortex - M3 series
+  * LPC1768
 
 ### Drivers
-* [DRV8825] on X/Y/Z/E/E0
+* [TCM2209] on X/Y/Z
+* [DRV8825] on E
 
 ### Steppers
 * **X-axis:** 1.8° motor
 * **Y-axis:** 1.8° motor
 * **Z-axis:** 1.8° motor
 * **Extruder:** 1.8° motor
-* **Microstepping:** 1/16
+* **Microstepping:** 1/32
 
 ### Hotend
- * Bowden Tube [E3D V6 all-metal hotend]
- * [E3D Clone 12V Heater Cartridge]
+ * Bowden Tube
+ * [24V Heater Cartridge]
  * [12v 5015 fan]
  * [PINDA](https://www.prusa3d.com)
 
 
 ### LCD Controller
-* RERAP 12864 LCD Smart Controller Display
+* RERAP Discount Smart Controller
 
 ### Wiring Guide
 
