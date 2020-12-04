@@ -12,10 +12,10 @@
 This firmware is configured for an AtomX MK3 fitted with a ATmega2560 RAMPS and DRV8825s:
 
 ### Motherboard
-* [ATmega2560 RAMPS]
+* [ATmega2560 RAMPS](https://reprap.org/wiki/RAMPS_1.4)
 
 ### Drivers
-* [DRV8825] on X/Y/Z/E/E0
+* DRV8825 on X/Y/Z/E/E0
 
 ### Steppers
 * **X-axis:** 1.8° motor
@@ -26,8 +26,8 @@ This firmware is configured for an AtomX MK3 fitted with a ATmega2560 RAMPS and 
 
 ### Hotend
  * Bowden Tube [E3D V6 all-metal hotend]
- * [E3D Clone 12V Heater Cartridge]
- * [12v 5015 fan]
+ * E3D Clone 12V Heater Cartridge
+ * 12v 5015 fan
  * [PINDA](https://www.prusa3d.com)
 
 
