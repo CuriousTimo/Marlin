@@ -1,4 +1,4 @@
-# Marlin Firmware for Crearibo i3 CR10 MK3s / BTT SKR Mini V1.1 / TCM2209
+# Marlin Firmware for Crearibo i3 CR10 MK3s / BTT SKR V1.4 Turbo / TCM2209
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
