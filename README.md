@@ -14,17 +14,16 @@ This firmware is configured for an AtomX MK3s fitted with a ATmega2560 RAMPS and
 ### Motherboard
 * Arduino Mega 2560
 * RAMPS v1.4
-
-* CPU: ATmega2560
+* **CPU:** ATmega2560
 
 ### LCD Controller
  * RERAP 12864 LCD Smart Controller Display
 
 ### Drivers
- * X: DRV8825
- * Y: DRV8825
- * Z: DRV8825
- * E: DRV8825
+ * **X-axis:** DRV8825
+ * **Y-axis:** DRV8825
+ * **Z-axis:** DRV8825
+ * **E0:** DRV8825
 
 ### Steppers
 * **X-axis:** 1.8° motor
@@ -36,8 +35,8 @@ This firmware is configured for an AtomX MK3s fitted with a ATmega2560 RAMPS and
 ### Hotend
  * E3D Clone 12V Heater Cartridge
  * Bowden Tube (E3D V6 all-metal hotend)
- * [2v 40x40x10 hotend fan
- * [2v 5015 part cooling fan
+ * 12v 40x40x10 hotend fan
+ * 12v 5015 part cooling fan
  * PINDA (https://www.prusa3d.com)
 
 ### Bed
@@ -54,5 +53,5 @@ This firmware is configured for an AtomX MK3s fitted with a ATmega2560 RAMPS and
 ### BOM
 
 ### Other
- * Build Volume: 110mm x 110mm x 180mm
- * Firmware: Marlin 2.0.9.3
+ * **Build Volume:** 110mm x 110mm x 180mm
+ * **Firmware:** Marlin 2.0.9.3
