@@ -17,7 +17,7 @@ This firmware is configured for an AtomX MK3s fitted with a ATmega2560 RAMPS and
 * **CPU:** ATmega2560
 
 ### LCD Controller
- * RERAP 12864 LCD Smart Controller Display
+ * RepRapDiscount FULL GRAPHIC Smart Controller
 
 ### Drivers
  * **X-axis:** DRV8825
@@ -37,13 +37,12 @@ This firmware is configured for an AtomX MK3s fitted with a ATmega2560 RAMPS and
  * Bowden Tube (E3D V6 all-metal hotend)
  * 12v 40x40x10 hotend fan
  * 12v 5015 part cooling fan
- * PINDA (https://www.prusa3d.com)
 
 ### Bed
  * 120mm x 120mm
 
 ### Probe
- * Inductive
+ * M8 Inductive LJ8A3-2-Z/BX-5V
 
 ### Power Supply
  * 12v 
