@@ -51,5 +51,5 @@ This firmware is configured for a Prusa Mendel i2 MK2 fitted with a BTT SKR Mini
 ### BOM
 
 ### Other
- * **Build Volume:** 207mm x 210mm x 130mm
+ * **Build Volume:** 208mm x 210mm x 123mm
  * **Firmware:** Marlin 2.0.9.3
