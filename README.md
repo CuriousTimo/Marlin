@@ -20,10 +20,10 @@ This firmware is configured for an AtomX MK3s fitted with a ATmega2560 RAMPS and
  * RepRapDiscount FULL GRAPHIC Smart Controller
 
 ### Drivers
- * **X-axis:** DRV8825
- * **Y-axis:** DRV8825
- * **Z-axis:** DRV8825
- * **E0:** DRV8825
+ * **X-axis:** TMC2208 (STANDALONE)
+ * **Y-axis:** TMC2208 (STANDALONE)
+ * **Z-axis:** TMC2208 (STANDALONE)
+ * **E0:** TMC2208 (STANDALONE)
 
 ### Steppers
 * **X-axis:** 1.8° motor
