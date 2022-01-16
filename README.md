@@ -44,7 +44,7 @@ This firmware is configured for a Crearibo i3 CR10 MK3s fitted with a BTT SKR V1
  * 300 x 300mm
 
 ### Probe
- * PINDA V2 CLone TriangleLAB (https://www.prusa3d.com)
+ * Original Prusa PINDA (4 Wire)
 
 ### Power Supply
  * Meanwell LRS250-24 24v 
