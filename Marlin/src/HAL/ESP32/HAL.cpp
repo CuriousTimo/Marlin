@@ -32,6 +32,10 @@
   #include <esp_task_wdt.h>
 #endif
 
+#if ENABLED(ULTI_CONTROLLER)
+  #include <U8glib-HAL.h>
+#endif
+
 #if ENABLED(WIFISUPPORT)
   #include <ESPAsyncWebServer.h>
   #include "wifi.h"
