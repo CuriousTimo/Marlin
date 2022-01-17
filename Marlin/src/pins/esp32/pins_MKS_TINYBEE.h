@@ -43,7 +43,8 @@
 //
 // Servos
 //
-#define SERVO0_PIN                             2
+//#define SERVO0_PIN                             2
+#define SERVO0_PIN                            -1
 
 //
 // Limit Switches
@@ -188,6 +189,12 @@
     #if SD_CONNECTION_IS(ONBOARD)
       #define FORCE_SOFT_SPI
     #endif
+
+  #elif ENABLED(ULTI_CONTROLLER)
+    #define LCD_PINS_D4              EXP1_06_PIN
+    #define LCD_PINS_D5              EXP1_05_PIN
+    #define LCD_PINS_D6              EXP1_04_PIN
+    #define LCD_PINS_D7              EXP1_03_PIN
 
   #else // !MKS_MINI_12864
 
