@@ -39,7 +39,7 @@ MKS TinyBee (https://github.com/makerbase-mks/MKS-TinyBee)
  * 12v 4020 Blower - part cooling fan
 
 ### Probe
- * BLTOUCh
+ * BLTouch
 
 ### Power Supply
  * 12v 
