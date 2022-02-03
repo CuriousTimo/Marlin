@@ -30,7 +30,7 @@ MKS TinyBee (https://github.com/makerbase-mks/MKS-TinyBee)
 * **X-axis:** 1.8° motor
 * **Y-axis:** 1.8° motor
 * **Z-axis:** 1.8° motor
-* **Extruder:** 1.8° motor
+* **Extruder:** 1.8° motor (Original Prusa)
 * **Microstepping:** 1/16
 
 ### Hotend
