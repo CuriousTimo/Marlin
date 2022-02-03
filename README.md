@@ -1,27 +1,53 @@
-# Marlin Firmware for Ultimaker 2 Extended 3D Printer
-Marlin 2.0.9.3
+# Marlin Firmware for Prusa Mendel i2 MK2 / MKS TinyBee / TCM2208/2209 / 1.8 Steppers
+
+![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/marlinfirmware/marlin.svg)
+[![Build Status](https://github.com/MarlinFirmware/Marlin/workflows/CI/badge.svg?branch=bugfix-2.0.x)](https://github.com/MarlinFirmware/Marlin/actions)
+
+<img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
+
+## Specs
+This firmware is configured for a Prusa Mendel i2 MK2 fitted with a MKS TinyBee and TCM2208 / TCM2209:
 
 ## Board
 MKS TinyBee (https://github.com/makerbase-mks/MKS-TinyBee)
 
 ## CPU:
  - ESP32
+ 
+### LCD Controller
+ * RepRapDiscount Smart Controller
 
-## Drivers:
- - X: BIGTREETECH TCM2209 V1.2 (Stand Alone)
- - Y: BIGTREETECH TCM2209 V1.2 (Stand Alone)
- - Z: BIGTREETECH TCM2209 V1.2 (Stand Alone)
- - E: BIGTREETECH TCM2209 V1.2 (Stand Alone)
- 
-## Hotend:
- - E3D V6 Clone
- - Thermistor: Trianglelab ATC Semitec 104GT-2 104NT-4-R025H42G
- 
-## Bed:
- - Ultimaker 3.5Ohm 165W
- - Thermistor: 100K
- - Φ230mm x 300mm
- - Probe: Prusa PINDA v2
- 
-## Power Supply:
-- 24V
+### Drivers
+ * **X-axis:** BIGTREETECH TCM2209 (Standalone)
+ * **Y-axis:** BIGTREETECH TCM2209 (Standalone)
+ * **Z-axis 0:** BIGTREETECH TCM2208 V3.0 (Standalone)
+ * **Z-axis 1:** BIGTREETECH TCM2208 V3.0 (Standalone)
+ * **E0:** BIGTREETECH TCM2208 V3.0 (Standalone)
+
+ ### Steppers
+* **X-axis:** 1.8° motor
+* **Y-axis:** 1.8° motor
+* **Z-axis:** 1.8° motor
+* **Extruder:** 1.8° motor
+* **Microstepping:** 1/16
+
+### Hotend
+ * E3D Clone 12V Heater Cartridge
+ * 12v 40x40x10 - hotend fan
+ * 12v 4020 Blower - part cooling fan
+
+### Probe
+ * PINDA (https://www.prusa3d.com)
+
+### Power Supply
+ * 12v 
+
+### Wiring Guide
+
+### BOM
+
+### Other
+ * **Build Volume:** 208mm x 210mm x 123mm
+ * **Firmware:** Marlin 2.0.9.3
