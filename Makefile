@@ -1,52 +1,55 @@
-help:
-	@echo "Tasks for local development:"
-	@echo "* tests-single-ci:             Run a single test from inside the CI"
-	@echo "* tests-single-local:          Run a single test locally"
-	@echo "* tests-single-local-docker:   Run a single test locally, using docker-compose"
-	@echo "* tests-all-local:             Run all tests locally"
-	@echo "* tests-all-local-docker:      Run all tests locally, using docker-compose"
-	@echo "* setup-local-docker:          Setup local docker-compose"
-	@echo ""
-	@echo "Options for testing:"
-	@echo "  TEST_TARGET          Set when running tests-single-*, to select the"
-	@echo "                       test. If you set it to ALL it will run all "
-	@echo "                       tests, but some of them are broken: use "
-	@echo "                       tests-all-* instead to run only the ones that "
-	@echo "                       run on GitHub CI"
-	@echo "  ONLY_TEST            Limit tests to only those that contain this, or"
-	@echo "                       the index of the test (1-based)"
-	@echo "  VERBOSE_PLATFORMIO   If you want the full PIO output, set any value"
-	@echo "  GIT_RESET_HARD       Used by CI: reset all local changes. WARNING:"
-	@echo "                       THIS WILL UNDO ANY CHANGES YOU'VE MADE!"
-.PHONY: help
+# Marlin Firmware for Prusa Mendel i2 MK2 / BTT SKR Mini V1.1 / TCM2208 / 1.8 Steppers
 
-tests-single-ci:
-	export GIT_RESET_HARD=true
-	$(MAKE) tests-single-local TEST_TARGET=$(TEST_TARGET)
-.PHONY: tests-single-ci
+![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/marlinfirmware/marlin.svg)
+[![Build Status](https://github.com/MarlinFirmware/Marlin/workflows/CI/badge.svg?branch=bugfix-2.0.x)](https://github.com/MarlinFirmware/Marlin/actions)
 
-tests-single-local:
-	@if ! test -n "$(TEST_TARGET)" ; then echo "***ERROR*** Set TEST_TARGET=<your-module> or use make tests-all-local" ; return 1; fi
-	export PATH=./buildroot/bin/:./buildroot/tests/:${PATH} \
-	  && export VERBOSE_PLATFORMIO=$(VERBOSE_PLATFORMIO) \
-	  && run_tests . $(TEST_TARGET) "$(ONLY_TEST)"
-.PHONY: tests-single-local
+<img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
 
-tests-single-local-docker:
-	@if ! test -n "$(TEST_TARGET)" ; then echo "***ERROR*** Set TEST_TARGET=<your-module> or use make tests-all-local-docker" ; return 1; fi
-	docker-compose run --rm marlin $(MAKE) tests-single-local TEST_TARGET=$(TEST_TARGET) VERBOSE_PLATFORMIO=$(VERBOSE_PLATFORMIO) GIT_RESET_HARD=$(GIT_RESET_HARD) ONLY_TEST="$(ONLY_TEST)"
-.PHONY: tests-single-local-docker
+## Specs
 
-tests-all-local:
-	export PATH=./buildroot/bin/:./buildroot/tests/:${PATH} \
-	  && export VERBOSE_PLATFORMIO=$(VERBOSE_PLATFORMIO) \
-	  && for TEST_TARGET in $$(./get_test_targets.py) ; do echo "Running tests for $$TEST_TARGET" ; run_tests . $$TEST_TARGET ; done
-.PHONY: tests-all-local
+This firmware is configured for a Prusa Mendel i2 MK2 fitted with a BTT SKR Mini v1.1 and TCM2208:
 
-tests-all-local-docker:
-	docker-compose run --rm marlin $(MAKE) tests-all-local VERBOSE_PLATFORMIO=$(VERBOSE_PLATFORMIO) GIT_RESET_HARD=$(GIT_RESET_HARD)
-.PHONY: tests-all-local-docker
+### Motherboard
+* BIGTREETECH SKR MINI V1.1 (https://github.com/bigtreetech/BIGTREETECH-SKR-MINI-V1.1)
+* **CPU:** ARM Cortex - M3 series | STM32F103RCT
 
-setup-local-docker:
-	docker-compose build
-.PHONY: setup-local-docker
+### LCD Controller
+ * RepRapDiscount Smart Controller
+
+### Drivers
+ * **X-axis:** BIGTREETECH TCM2209 (Standalone)
+ * **Y-axis:** BIGTREETECH TCM2208 V3.0 (Standalone)
+ * **Z-axis:** BIGTREETECH TCM2208 V3.0 (Standalone)
+ * **E0:** BIGTREETECH TCM2208 V3.0 (Standalone)
+
+### Steppers
+* **X-axis:** 1.8° motor
+* **Y-axis:** 1.8° motor
+* **Z-axis:** 1.8° motor
+* **Extruder:** 1.8° motor
+* **Microstepping:** 1/16
+
+### Hotend
+ * E3D Clone 12V Heater Cartridge
+ * 12v 40x40x10 hotend fan
+ * 12v 5015 part cooling fan
+
+### Bed
+ * Original Prusa MK42
+ * 210mm x 210mm
+
+### Probe
+ * PINDA (https://www.prusa3d.com)
+
+### Power Supply
+ * 12v 
+
+### Wiring Guide
+
+### BOM
+
+### Other
+ * **Build Volume:** 208mm x 210mm x 123mm
+ * **Firmware:** Marlin 2.0.9.3

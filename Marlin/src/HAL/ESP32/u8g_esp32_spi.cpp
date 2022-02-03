@@ -1,6 +1,6 @@
 #include "../../inc/MarlinConfigPre.h"
 
-#if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
+#if ENABLED(MKS_MINI_12864_V3)
 
 #include <U8glib-HAL.h>
 #include "Arduino.h"
