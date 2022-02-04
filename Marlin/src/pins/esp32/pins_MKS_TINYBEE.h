@@ -52,7 +52,7 @@
 #define X_STOP_PIN                            33
 #define Y_STOP_PIN                            32
 #define Z_STOP_PIN                            22
-#define FIL_RUNOUT_PIN                      35
+#define FIL_RUNOUT_PIN                        35
 
 //
 // Enable I2S stepper stream
@@ -74,9 +74,13 @@
 #define X_DIR_PIN                            130
 #define X_ENABLE_PIN                         128
 
-#define Y_STEP_PIN                           132
-#define Y_DIR_PIN                            133
-#define Y_ENABLE_PIN                         131
+//#define Y_STEP_PIN                           132
+//#define Y_DIR_PIN                            133
+//#define Y_ENABLE_PIN                         131
+
+#define Y_STEP_PIN                           141
+#define Y_DIR_PIN                            142
+#define Y_ENABLE_PIN                         140
 
 #define Z_STEP_PIN                           135
 #define Z_DIR_PIN                            136
@@ -86,13 +90,21 @@
 #define E0_DIR_PIN                           139
 #define E0_ENABLE_PIN                        137
 
-#define E1_STEP_PIN                          141
-#define E1_DIR_PIN                           142
-#define E1_ENABLE_PIN                        140
+//#define E1_STEP_PIN                          141
+//#define E1_DIR_PIN                           142
+//#define E1_ENABLE_PIN                        140
 
-#define Z2_STEP_PIN                          141
-#define Z2_DIR_PIN                           142
-#define Z2_ENABLE_PIN                        140
+#define E1_STEP_PIN                          132
+#define E1_DIR_PIN                           133
+#define E1_ENABLE_PIN                        131
+
+//#define Z2_STEP_PIN                          141
+//#define Z2_DIR_PIN                           142
+//#define Z2_ENABLE_PIN                        140
+
+#define Z2_STEP_PIN                          132
+#define Z2_DIR_PIN                           133
+#define Z2_ENABLE_PIN                        131
 
 //
 // Temperature Sensors
