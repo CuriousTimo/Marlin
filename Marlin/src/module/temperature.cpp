@@ -2391,6 +2391,25 @@ void Temperature::updateTemperaturesFromRawValues() {
   #endif
 
   TERN_(HAS_HEATED_BED,     temp_bed.celsius       = analog_to_celsius_bed(temp_bed.getraw()));
+
+  #if ENABLED(BENCH_SIM)
+  { // Bench Mega fake heaters (Configuration.h BENCH_SIM): toward the target, or 25 C when off
+    static millis_t last = 0;
+    const millis_t now = millis();
+    const float dt = last ? (now - last) / 1000.0f : 0.0f;
+    last = now;
+    auto sim = [dt](float &v, const float target) {
+      const float goal = target > 25 ? target : 25, step = (goal > v ? 10.0f : 3.0f) * dt;
+      v = ABS(goal - v) <= step ? goal : v + (goal > v ? step : -step);
+    };
+    static float hot[HOTENDS] = { 25 };
+    HOTEND_LOOP() { sim(hot[e], temp_hotend[e].target); temp_hotend[e].celsius = hot[e]; }
+    #if HAS_HEATED_BED
+      static float bed = 25;
+      sim(bed, temp_bed.target); temp_bed.celsius = bed;
+    #endif
+  }
+  #endif
   TERN_(HAS_TEMP_CHAMBER,   temp_chamber.celsius   = analog_to_celsius_chamber(temp_chamber.getraw()));
   TERN_(HAS_TEMP_COOLER,    temp_cooler.celsius    = analog_to_celsius_cooler(temp_cooler.getraw()));
   TERN_(HAS_TEMP_PROBE,     temp_probe.celsius     = analog_to_celsius_probe(temp_probe.getraw()));

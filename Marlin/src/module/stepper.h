@@ -476,6 +476,11 @@ constexpr ena_mask_t enable_overlap[] = {
 // Stepper class definition
 //
 class Stepper {
+  public:
+    #if ENABLED(BENCH_SIM)
+      // Bench Mega fake endstops (Configuration.h BENCH_SIM): the axis position in steps
+      static int32_t bench_sim_count(const AxisEnum a) { return count_position[a]; }
+    #endif
   friend void stepperTask(void *);
 
   public:

@@ -1005,6 +1005,13 @@ void Endstops::update() {
     #endif
   #endif
 
+  #if ENABLED(BENCH_SIM)
+    // Bench Mega fake endstops (Configuration.h BENCH_SIM): a MIN endstop is hit below 0 steps
+    SET_BIT_TO(live_state, X_MIN, stepper.bench_sim_count(X_AXIS) < 0);
+    SET_BIT_TO(live_state, Y_MIN, stepper.bench_sim_count(Y_AXIS) < 0);
+    SET_BIT_TO(live_state, Z_MIN, stepper.bench_sim_count(Z_AXIS) < 0);
+  #endif
+
   #if ENDSTOP_NOISE_THRESHOLD
 
     /**

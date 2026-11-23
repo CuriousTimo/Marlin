@@ -61,7 +61,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Curious Timo, AtomX MK3, RAMPS)"  // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Curious Timo, Bench Mega test: AtomX MK3 settings, dummy sensors)"  // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -138,7 +138,17 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "AtomX MK3"
+#define CUSTOM_MACHINE_NAME "Bench Mega"
+
+/**
+ * BENCH_SIM: a FAKE printer for testing a host (Maker Connect) on a bare Arduino Mega, with no
+ * heaters, thermistors, steppers, endstops or probe attached. NOT Marlin behaviour; never on a real
+ * printer. With TEMP_SENSOR_0/BED 998:
+ *  - a reading moves 10 C/s toward the target, 3 C/s back to 25 C when off (M109/M190 finish);
+ *  - X/Y/Z_MIN read triggered when the axis is below 0 steps: a homing move starts at 0 and goes
+ *    toward min, so G28 and the Z probe (G29: a flat bed) hit at once.
+ */
+#define BENCH_SIM
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -551,7 +561,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 998
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -559,7 +569,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 998
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
